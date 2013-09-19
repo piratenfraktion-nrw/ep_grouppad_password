@@ -3,7 +3,7 @@ function sendSetPasswordRequest(password){
   var padId = pad.getPadId();
   // Send chat message to send to the server
   var message = {
-    type : 'ep_grouppadpassword',
+    type : 'ep_grouppad_password',
     action : 'setGrouppadPassword',
     padId : padId,
     password: password

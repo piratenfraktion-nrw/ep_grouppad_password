@@ -10,12 +10,9 @@ exports.handleMessage = function(hook_name, context, callback){
   if(context) {
     if(context.message && context.message){
       if(context.message.type === 'COLLABROOM'){
-        console.log('COLLABROM REQ');
         if(context.message.data){
           if(context.message.data.type){
-            console.log('COLLABROM REQ TYPE');
-            if(context.message.data.type === 'ep_grouppadpassword'){
-              console.log('COLLABROM SET PASS REQ');
+            if(context.message.data.type === 'ep_grouppad_password'){
               isSetPasswordRequest = true;
             }
           }
@@ -39,6 +36,7 @@ exports.handleMessage = function(hook_name, context, callback){
   if(packet.action === 'setGrouppadPassword'){
     var pad = new Pad(packet.padId);
     pad.setPassword(packet.password);
+    console.log('set pad password');
   }
 };
 
