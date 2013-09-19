@@ -1,0 +1,12 @@
+{
+  "parts": [
+    {
+      "name": "grouppad_password",
+      "hooks": {
+        "eejsBlock_embedPopup": "ep_grouppad_password/hooks",
+        "eejsBlock_scripts": "ep_grouppad_password/hooks",
+        "eejsBlock_styles": "ep_grouppad_password/hooks"
+      }
+    }
+  ]
+}

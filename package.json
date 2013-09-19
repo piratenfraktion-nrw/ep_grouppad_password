@@ -1,0 +1,26 @@
+{
+  "name": "ep_grouppad_password",
+  "description": "Set Groupad password for Etherpad Lite",
+  "homepage": "https://github.com/piratenfraktion-nrw/ep_grouppad_password",
+  "keywords": [
+    "etherpad",
+    "groups",
+    "password"
+  ],
+  "author": {
+    "name": "vileda",
+    "email": "vileda@piratenfraktion-nrw.de",
+    "url": "http://www.piratenfraktion-nrw.de"
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/piratenfraktion-nrw/ep_grouppad_password.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
