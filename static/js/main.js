@@ -1,14 +1,15 @@
 function sendSetPasswordRequest(password){
-  var myAuthorId = pad.getUserId();
-  var padId = pad.getPadId();
-  // Send chat message to send to the server
-  var message = {
-    type : 'ep_grouppad_password',
-    action : 'setGrouppadPassword',
-    padId : padId,
+  var message = JSON.stringify({
     password: password
-  };
-  pad.collabClient.sendMessage(message);
+  });
+  $.ajax('/api/pad/'+location.pathname.split('/')[2]+'/password', {
+    data: message,
+    contentType: 'application/json',
+    type: 'POST'
+  }).success(function(data) {
+      $('#set_password_button').text('Password Saved');
+      $('#grouppad_password input#pad_password').val('');
+  });
 }
 
 $(function() {
